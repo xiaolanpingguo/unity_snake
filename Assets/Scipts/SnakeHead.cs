@@ -110,11 +110,11 @@ public class SnakeHead : MonoBehaviour
                     Debug.Log("Down Die....");
                     break;
                 case "Left":
-                    transform.localPosition = new Vector3(-transform.localPosition.x - 30, transform.localPosition.y, transform.localPosition.z);
+                    transform.localPosition = new Vector3(-transform.localPosition.x + 300 - 30, transform.localPosition.y, transform.localPosition.z);
                     Debug.Log("Left Die....");
                     break;
                 case "Right":
-                    transform.localPosition = new Vector3(-transform.localPosition.x + 30, transform.localPosition.y, transform.localPosition.z);
+                    transform.localPosition = new Vector3(-transform.localPosition.x + 300 + 30, transform.localPosition.y, transform.localPosition.z);
                     Debug.Log("Right Die....");
                     break;
                 default:
