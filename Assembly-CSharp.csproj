@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scipts\FoodMaker.cs" />
+     <Compile Include="Assets\Scipts\MainUIController.cs" />
      <Compile Include="Assets\Scipts\SnakeHead.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>G:/UnityProjects/Snake/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

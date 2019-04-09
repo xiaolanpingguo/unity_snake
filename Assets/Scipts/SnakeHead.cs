@@ -88,8 +88,16 @@ public class SnakeHead : MonoBehaviour
         if (collision.tag == "Food")
         {
             Destroy(collision.gameObject);
+            MainUIController.Instance().UpdateUI();
             Grow();
             FoodMaker.Instance().MakeFood();
+        }
+        // 奖励
+        if (collision.tag == "Reward")
+        {
+            Destroy(collision.gameObject);
+            MainUIController.Instance().UpdateUI(Random.Range(5, 15) * 10);
+            Grow();
         }
         // 身体
         else if (collision.tag == "Body")

@@ -7,7 +7,6 @@ public class FoodMaker : MonoBehaviour
 {
     public int xlimit = 18;
     public int ylimit = 12;
-    public int stepLenth = 30;
 
     public GameObject foodPrefab;
     public Sprite[] foodSprite;
