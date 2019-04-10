@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class FoodMaker : MonoBehaviour
 {
-    public int xlimit = 18;
-    public int ylimit = 12;
+    private int xlimit = 17;
+    private int ylimit = 12;
+    private int xoffset = 10;
 
     public GameObject foodPrefab;
     public Sprite[] foodSprite;
@@ -42,8 +43,8 @@ public class FoodMaker : MonoBehaviour
         int index = Random.Range(0, foodSprite.Length);
         GameObject food = Instantiate(foodPrefab);
         food.GetComponent<Image>().sprite = foodSprite[index];
-        food.transform.SetParent(foodHolder, false);
-        int x = Random.Range(-xlimit, xlimit);
+        food.transform.SetParent(foodHolder, false);  
+        int x = Random.Range(-xlimit + xoffset, xlimit);
         int y = Random.Range(-ylimit, ylimit);
         food.transform.localPosition = new Vector3(x * 30, y * 30, 0);
     }

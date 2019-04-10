@@ -27,6 +27,7 @@ public class MainUIController : MonoBehaviour
     void Awake()
     {
         _instance = this;
+        pauseImage.sprite = pauseSprites[0];
     }
 
     public void UpdateUI(int s = 5, int l = 1)
@@ -90,5 +91,10 @@ public class MainUIController : MonoBehaviour
             Time.timeScale = 1;
             pauseImage.sprite = pauseSprites[0];
         }
+    }
+
+    public void Home()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
